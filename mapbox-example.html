@@ -31,7 +31,7 @@
     function lerp(r,n,t){if(Array.isArray(r)&&Array.isArray(n)){const e=[];for(let a=0;a<Math.min(r.length,n.length);a++)e[a]=r[a]*(1-t)+n[a]*t;return e}return r*(1-t)+n*t}
     function animate(n){let t=null,o=null,e=0,u=0;const a=function(c){o=requestAnimationFrame(a);const i=c-t;t=c,e+=i;const{duration:l,update:r}=n[u];e>l?(u++,u%=n.length,e-=l):r(e/l)};function c(){o&&cancelAnimationFrame(o),o=null}return{play:function(){o||(t=performance.now(),a(t))},pause:c,stop:function(){c(),e=0,u=0}}}
 
-    mapboxgl.accessToken = '<-- your token here -->';
+    mapboxgl.accessToken = 'pk.eyJ1IjoiZnJhbnppbmR1c3RyaWVzIiwiYSI6ImNrZXN6bDI0ZDE5ejMycm1yMzQ4YTcxcmkifQ.aL6yg8sRwBFNq_7Trmtw9Q';
 
     var animation = null;
     var map = window.map = new mapboxgl.Map({
